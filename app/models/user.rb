@@ -25,7 +25,7 @@ class User < ApplicationRecord
     self.want_items.include?(item)
   end
   
-   def have(item)
+  def have(item)
     self.haves.find_or_create_by(item_id: item.id)
   end
 
